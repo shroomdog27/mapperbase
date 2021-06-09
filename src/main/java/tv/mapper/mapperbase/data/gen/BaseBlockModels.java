@@ -21,10 +21,6 @@ public class BaseBlockModels extends BlockModelProvider
     @Override
     protected void registerModels()
     {
-        buildWall("steel", modLoc("block/steel_block"));
-        getBuilder("steel_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/steel_block"));
-        getBuilder("steel_pressure_plate_down").parent(getExistingFile(mcLoc("block/pressure_plate_down"))).texture("texture", modLoc("block/steel_block"));
-        getBuilder("steel_fence_inventory").parent(getExistingFile(mcLoc("block/fence_inventory"))).texture("texture", modLoc("block/steel_block"));
 
         buildWall("concrete", modLoc("block/concrete"));
         getBuilder("concrete_pressure_plate").parent(getExistingFile(mcLoc("block/pressure_plate_up"))).texture("texture", modLoc("block/concrete"));
