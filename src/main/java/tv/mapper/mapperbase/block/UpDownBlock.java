@@ -28,17 +28,19 @@ public class UpDownBlock extends CustomBlock
         this.toolType = toolType;
     }
 
+    @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
     {
         builder.add(UPSIDE_DOWN);
     }
 
+    @Override
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
         BlockPos blockpos = context.getPos();
         BlockState state = this.getDefaultState().with(UPSIDE_DOWN, false);
         Direction facing = context.getFace();
-        return facing != Direction.DOWN && (facing == Direction.UP || !(context.getHitVec().y - (double)blockpos.getY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
+        return facing != Direction.DOWN && (facing == Direction.UP || !(context.getHitVec().y - blockpos.getY() > 0.5D)) ? state : state.with(UPSIDE_DOWN, Boolean.valueOf(true));
     }
 }

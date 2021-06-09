@@ -31,31 +31,37 @@ public enum BaseItemTier implements IItemTier
         this.repairMaterial = new LazyValue<>(repairMaterialIn);
     }
 
+    @Override
     public int getMaxUses()
     {
         return this.maxUses;
     }
 
+    @Override
     public float getEfficiency()
     {
         return this.efficiency;
     }
 
+    @Override
     public float getAttackDamage()
     {
         return this.attackDamage;
     }
 
+    @Override
     public int getHarvestLevel()
     {
         return this.harvestLevel;
     }
 
+    @Override
     public int getEnchantability()
     {
         return this.enchantability;
     }
 
+    @Override
     public Ingredient getRepairMaterial()
     {
         return this.repairMaterial.getValue();

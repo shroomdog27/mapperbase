@@ -17,6 +17,7 @@ public class BaseItemTags extends ItemTagsProvider
         super(generatorIn, blockTagProvider, MapperBase.MODID, existingFileHelper);
     }
 
+    @Override
     public void registerTags()
     {
         copy(BlockTags.STAIRS, ItemTags.STAIRS);

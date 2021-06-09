@@ -16,6 +16,7 @@ public class BaseBlockTags extends BlockTagsProvider
         super(generatorIn, MapperBase.MODID, existingFileHelper);
     }
 
+    @Override
     public void registerTags()
     {
         this.getOrCreateBuilder(BlockTags.STAIRS).add(BaseBlocks.STEEL_STAIRS.get(), BaseBlocks.CONCRETE_STAIRS.get(), BaseBlocks.ASPHALT_STAIRS.get());

@@ -40,28 +40,28 @@ public class BaseBlockStates extends BlockStateProvider
     protected void registerStatesAndModels()
     {
         simpleBlock(BaseBlocks.STEEL_BLOCK.get());
-        slabBlock((SlabBlock)BaseBlocks.STEEL_SLAB.get(), modLoc("block/steel_block"), modLoc("block/steel_slab_side"), modLoc("block/steel_block"), modLoc("block/steel_block"));
-        stairsBlock((StairsBlock)BaseBlocks.STEEL_STAIRS.get(), modLoc("block/steel_block"), modLoc("block/steel_block"), modLoc("block/steel_block"));
-        newWallBlock((WallBlock)BaseBlocks.STEEL_WALL.get(), new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_post"), new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_side"),
+        slabBlock(BaseBlocks.STEEL_SLAB.get(), modLoc("block/steel_block"), modLoc("block/steel_slab_side"), modLoc("block/steel_block"), modLoc("block/steel_block"));
+        stairsBlock(BaseBlocks.STEEL_STAIRS.get(), modLoc("block/steel_block"), modLoc("block/steel_block"), modLoc("block/steel_block"));
+        newWallBlock(BaseBlocks.STEEL_WALL.get(), new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_post"), new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_side"),
             new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_side_tall"));
         pressurePlateBlock(BaseBlocks.STEEL_PRESSURE_PLATE.get(), new UncheckedModelFile(MapperBase.MODID + ":block/steel_pressure_plate"),
             new UncheckedModelFile(MapperBase.MODID + ":block/steel_pressure_plate_down"));
-        fenceBlock((FenceBlock)BaseBlocks.STEEL_FENCE.get(), modLoc("block/steel_block"));
+        fenceBlock(BaseBlocks.STEEL_FENCE.get(), modLoc("block/steel_block"));
         fenceGateBlock(BaseBlocks.STEEL_FENCE_GATE.get(), modLoc("block/steel_block"));
 
         simpleBlock(BaseBlocks.CONCRETE.get());
-        slabBlock((SlabBlock)BaseBlocks.CONCRETE_SLAB.get(), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"));
-        stairsBlock((StairsBlock)BaseBlocks.CONCRETE_STAIRS.get(), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"));
-        newWallBlock((WallBlock)BaseBlocks.CONCRETE_WALL.get(), new UncheckedModelFile(MapperBase.MODID + ":block/concrete_wall_post"), new UncheckedModelFile(MapperBase.MODID + ":block/concrete_wall_side"),
+        slabBlock(BaseBlocks.CONCRETE_SLAB.get(), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"));
+        stairsBlock(BaseBlocks.CONCRETE_STAIRS.get(), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"));
+        newWallBlock(BaseBlocks.CONCRETE_WALL.get(), new UncheckedModelFile(MapperBase.MODID + ":block/concrete_wall_post"), new UncheckedModelFile(MapperBase.MODID + ":block/concrete_wall_side"),
             new UncheckedModelFile(MapperBase.MODID + ":block/concrete_wall_side_tall"));
         pressurePlateBlock(BaseBlocks.CONCRETE_PRESSURE_PLATE.get(), new UncheckedModelFile(MapperBase.MODID + ":block/concrete_pressure_plate"),
             new UncheckedModelFile(MapperBase.MODID + ":block/concrete_pressure_plate_down"));
-        fenceBlock((FenceBlock)BaseBlocks.CONCRETE_FENCE.get(), modLoc("block/concrete"));
+        fenceBlock(BaseBlocks.CONCRETE_FENCE.get(), modLoc("block/concrete"));
         fenceGateBlock(BaseBlocks.CONCRETE_FENCE_GATE.get(), modLoc("block/concrete"));
 
         simpleBlock(BaseBlocks.ASPHALT.get());
-        slabBlock((SlabBlock)BaseBlocks.ASPHALT_SLAB.get(), modLoc("block/asphalt"), modLoc("block/asphalt"), modLoc("block/asphalt"), modLoc("block/asphalt"));
-        stairsBlock((StairsBlock)BaseBlocks.ASPHALT_STAIRS.get(), modLoc("block/asphalt"), modLoc("block/asphalt"), modLoc("block/asphalt"));
+        slabBlock(BaseBlocks.ASPHALT_SLAB.get(), modLoc("block/asphalt"), modLoc("block/asphalt"), modLoc("block/asphalt"), modLoc("block/asphalt"));
+        stairsBlock(BaseBlocks.ASPHALT_STAIRS.get(), modLoc("block/asphalt"), modLoc("block/asphalt"), modLoc("block/asphalt"));
         pressurePlateBlock(BaseBlocks.ASPHALT_PRESSURE_PLATE.get(), new UncheckedModelFile(MapperBase.MODID + ":block/asphalt_pressure_plate"),
             new UncheckedModelFile(MapperBase.MODID + ":block/asphalt_pressure_plate_down"));
 
