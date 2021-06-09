@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "mapperbase:steel_pressure_plate",
-    "mapperbase:concrete_pressure_plate",
-    "mapperbase:asphalt_pressure_plate"
-  ]
-}

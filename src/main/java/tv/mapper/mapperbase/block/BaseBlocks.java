@@ -18,23 +18,6 @@ public class BaseBlocks
 {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MapperBase.MODID);
 
-    public static final RegistryObject<CustomBlock> STEEL_BLOCK = BLOCKS.register("steel_block",
-        () -> new CustomBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
-    public static final RegistryObject<CustomStairsBlock> STEEL_STAIRS = BLOCKS.register("steel_stairs",
-        () -> new CustomStairsBlock(() -> STEEL_BLOCK.get().getDefaultState(), Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(
-            SoundType.LANTERN), ToolType.PICKAXE));
-    public static final RegistryObject<CustomSlabBlock> STEEL_SLAB = BLOCKS.register("steel_slab",
-        () -> new CustomSlabBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
-    public static final RegistryObject<CustomWallBlock> STEEL_WALL = BLOCKS.register("steel_wall",
-        () -> new CustomWallBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.LANTERN), ToolType.PICKAXE));
-    public static final RegistryObject<CustomPressurePlateBlock> STEEL_PRESSURE_PLATE = BLOCKS.register("steel_pressure_plate",
-        () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, Block.Properties.create(Material.IRON, MaterialColor.STONE).doesNotBlockMovement().hardnessAndResistance(5.0F, 6.0F).sound(
-            SoundType.LANTERN), ToolType.PICKAXE));
-    public static final RegistryObject<FenceBlock> STEEL_FENCE = BLOCKS.register("steel_fence",
-        () -> new FenceBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.LANTERN)));
-    public static final RegistryObject<FenceGateBlock> STEEL_FENCE_GATE = BLOCKS.register("steel_fence_gate",
-        () -> new FenceGateBlock(Block.Properties.create(Material.IRON, MaterialColor.STONE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.LANTERN)));
-
     public static final RegistryObject<PaintableBlock> CONCRETE = BLOCKS.register("concrete",
         () -> new PaintableBlock(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5F, 6.0F).sound(SoundType.STONE), ToolType.PICKAXE, 1));
     public static final RegistryObject<CustomStairsBlock> CONCRETE_STAIRS = BLOCKS.register("concrete_stairs",

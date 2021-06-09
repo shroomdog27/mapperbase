@@ -1,7 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "mapperbase:steel_block",
-    "mapperbase:bitumen_block"
-  ]
+  "values": []
 }

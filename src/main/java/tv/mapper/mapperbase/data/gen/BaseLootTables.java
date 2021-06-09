@@ -15,13 +15,6 @@ public class BaseLootTables extends BaseLootTableProvider
     @Override
     protected void addTables()
     {
-        lootTables.put(BaseBlocks.STEEL_BLOCK.get(), createStandardTable(MapperBase.MODID, BaseBlocks.STEEL_BLOCK.get()));
-        lootTables.put(BaseBlocks.STEEL_SLAB.get(), createSlabTable(MapperBase.MODID, BaseBlocks.STEEL_SLAB.get()));
-        lootTables.put(BaseBlocks.STEEL_STAIRS.get(), createStandardTable(MapperBase.MODID, BaseBlocks.STEEL_STAIRS.get()));
-        lootTables.put(BaseBlocks.STEEL_WALL.get(), createStandardTable(MapperBase.MODID, BaseBlocks.STEEL_WALL.get()));
-        lootTables.put(BaseBlocks.STEEL_PRESSURE_PLATE.get(), createStandardTable(MapperBase.MODID, BaseBlocks.STEEL_PRESSURE_PLATE.get()));
-        lootTables.put(BaseBlocks.STEEL_FENCE.get(), createStandardTable(MapperBase.MODID, BaseBlocks.STEEL_FENCE.get()));
-
         lootTables.put(BaseBlocks.CONCRETE.get(), createStandardTable(MapperBase.MODID, BaseBlocks.CONCRETE.get()));
         lootTables.put(BaseBlocks.CONCRETE_SLAB.get(), createSlabTable(MapperBase.MODID, BaseBlocks.CONCRETE_SLAB.get()));
         lootTables.put(BaseBlocks.CONCRETE_STAIRS.get(), createStandardTable(MapperBase.MODID, BaseBlocks.CONCRETE_STAIRS.get()));

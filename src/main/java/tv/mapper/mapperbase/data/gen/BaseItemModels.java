@@ -22,21 +22,11 @@ public class BaseItemModels extends ItemModelProvider
     protected void registerModels()
     {
         getBuilder("flatter_hammer").parent(new UncheckedModelFile("item/handheld")).texture("layer0", modLoc("item/flatter_hammer"));
-        getBuilder("steel_nugget").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_nugget"));
-        getBuilder("steel_ingot").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_ingot"));
-        getBuilder("steel_plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_plate"));
-        getBuilder("steel_rod").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_rod"));
-
-        getBuilder("iron_plate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/iron_plate"));
-        getBuilder("iron_rod").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/iron_rod"));
 
         getBuilder("bolt").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/bolt"));
 
-        getBuilder("steel_block").parent(new UncheckedModelFile(modid + ":block/steel_block"));
 
-        registerBlockBasics("steel", false, true, true, true, true, true);
         registerBlockBasics("concrete", true, true, true, true, true, true);
-        getBuilder("steel_fence_gate").parent(new UncheckedModelFile(modid + ":block/steel_fence_gate"));
         getBuilder("concrete_fence_gate").parent(new UncheckedModelFile(modid + ":block/concrete_fence_gate"));
 
         registerBlockBasics("asphalt", true, true, true, false, true, false);
@@ -45,19 +35,6 @@ public class BaseItemModels extends ItemModelProvider
         getBuilder("bitumen_ore").parent(new UncheckedModelFile(modid + ":block/bitumen_ore"));
         getBuilder("raw_bitumen").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/raw_bitumen"));
         getBuilder("bituminous_coal").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/bituminous_coal"));
-
-        getBuilder("steel_axe").parent(new UncheckedModelFile("item/handheld")).texture("layer0", modLoc("item/steel_axe"));
-        getBuilder("steel_pickaxe").parent(new UncheckedModelFile("item/handheld")).texture("layer0", modLoc("item/steel_pickaxe"));
-        getBuilder("steel_shovel").parent(new UncheckedModelFile("item/handheld")).texture("layer0", modLoc("item/steel_shovel"));
-        getBuilder("steel_hoe").parent(new UncheckedModelFile("item/handheld")).texture("layer0", modLoc("item/steel_hoe"));
-        getBuilder("steel_sword").parent(new UncheckedModelFile("item/handheld")).texture("layer0", modLoc("item/steel_sword"));
-
-        getBuilder("steel_helmet").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_helmet"));
-        getBuilder("steel_chestplate").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_chestplate"));
-        getBuilder("steel_leggings").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_leggings"));
-        getBuilder("steel_boots").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_boots"));
-
-        getBuilder("steel_horse_armor").parent(new UncheckedModelFile("item/generated")).texture("layer0", modLoc("item/steel_horse_armor"));
     }
 
     protected void registerBlockBasics(String name, boolean block, boolean slab, boolean stairs, boolean wall, boolean pressure, boolean fence)

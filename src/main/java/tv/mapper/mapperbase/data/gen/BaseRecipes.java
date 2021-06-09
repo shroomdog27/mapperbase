@@ -28,18 +28,6 @@ public class BaseRecipes extends RecipeProvider
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer)
     {
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.BOLT.get()).patternLine("x").patternLine("x").key('x', BaseTags.ForgeItems.NUGGETS_STEEL).addCriterion("has_steel_nugget", hasItem(BaseTags.ForgeItems.NUGGETS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.FLATTER_HAMMER.get()).patternLine("i").patternLine("/").key('i', BaseTags.ForgeItems.INGOTS_STEEL).key('/', Items.STICK).addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).addCriterion("has_stick", hasItem(Items.STICK)).build(consumer);
-
-        // Steel blocks
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_SLAB.get(), 6).patternLine("iii").key('i', BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL).addCriterion("has_steel_block", hasItem(BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_BLOCK.get()).patternLine("i").patternLine("i").key('i', BaseBlocks.STEEL_SLAB.get()).addCriterion("has_steel_slab", hasItem(BaseBlocks.STEEL_SLAB.get())).build(consumer, "mapperbase:steel_block_from_slabs");
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_STAIRS.get(), 4).key('#', BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion("has_steel_block", hasItem(BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_WALL.get(), 6).key('#', BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL).patternLine("###").patternLine("###").addCriterion("has_steel_block", hasItem(BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_PRESSURE_PLATE.get()).key('#', BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL).patternLine("##").addCriterion("has_steel_block", hasItem(BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_FENCE.get(), 3).patternLine("nsn").patternLine("isi").key('n', BaseItems.BOLT.get()).key('i', BaseTags.ForgeItems.INGOTS_STEEL).key('s', BaseTags.ForgeItems.RODS_STEEL).addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).addCriterion("has_steel_rod", hasItem(BaseTags.ForgeItems.RODS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_FENCE_GATE.get()).patternLine("sis").patternLine("sis").key('i', BaseTags.ForgeItems.INGOTS_STEEL).key('s', BaseTags.ForgeItems.RODS_STEEL).addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).addCriterion("has_steel_rod", hasItem(BaseTags.ForgeItems.RODS_STEEL)).build(consumer);
-
         // Concrete blocks
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.CONCRETE.get(), 4).key('G', Tags.Items.GRAVEL).key('S', Tags.Items.SAND).patternLine("GS").patternLine("SG").addCriterion("has_sand", hasItem(Tags.Items.SAND)).addCriterion("has_gravel", hasItem(Tags.Items.GRAVEL)).build(consumer, MapperBase.MODID + ":concrete_1");
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.CONCRETE.get(), 4).key('G', Tags.Items.GRAVEL).key('S', Tags.Items.SAND).patternLine("GS").patternLine("SG").addCriterion("has_sand", hasItem(Tags.Items.SAND)).addCriterion("has_gravel", hasItem(Tags.Items.GRAVEL)).build(consumer, MapperBase.MODID + ":concrete_2");
@@ -51,39 +39,6 @@ public class BaseRecipes extends RecipeProvider
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.CONCRETE_FENCE.get(), 3).patternLine("isi").patternLine("isi").key('i', BaseTags.Items.CONCRETE).key('s', BaseBlocks.CONCRETE_SLAB.get()).addCriterion("has_concrete", hasItem(BaseTags.Items.CONCRETE)).addCriterion("has_concrete_slab", hasItem(BaseBlocks.CONCRETE_SLAB.get())).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.CONCRETE_FENCE_GATE.get()).patternLine("sis").patternLine("sis").key('i', BaseTags.Items.CONCRETE).key('s', BaseBlocks.CONCRETE_SLAB.get()).addCriterion("has_concrete", hasItem(BaseTags.Items.CONCRETE)).addCriterion("has_concrete_slab", hasItem(BaseBlocks.CONCRETE_SLAB.get())).build(consumer);
         basicRecipes(consumer, BaseBlocks.CONCRETE.get(), BaseBlocks.CONCRETE_SLAB.get(), BaseBlocks.CONCRETE_STAIRS.get(), BaseBlocks.CONCRETE_WALL.get(), BaseBlocks.CONCRETE_PRESSURE_PLATE.get(), null, BaseBlocks.CONCRETE_FENCE.get(), BaseBlocks.CONCRETE_FENCE_GATE.get());
-
-        // Rods
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.IRON_ROD.get(), 4).patternLine("x").patternLine("x").key('x', Tags.Items.INGOTS_IRON).addCriterion("has_iron_ingot", hasItem(Items.IRON_INGOT)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_ROD.get(), 4).patternLine("x").patternLine("x").key('x', BaseTags.ForgeItems.INGOTS_STEEL).addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(Tags.Items.INGOTS_IRON), BaseItems.STEEL_NUGGET.get(), 1.0f, 200).addCriterion("has_iron_ingot", hasItem(Tags.Items.INGOTS_IRON)).build(consumer, MapperBase.MODID + ":steel_nugget_from_blasting");
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(Tags.Items.STORAGE_BLOCKS_IRON), BaseItems.STEEL_INGOT.get(), 8.0f, 1800).addCriterion("has_iron_block", hasItem(Tags.Items.STORAGE_BLOCKS_IRON)).build(consumer, MapperBase.MODID + ":steel_ingot_from_blasting");
-
-        // Metal plates
-        ShapelessRecipeBuilder.shapelessRecipe(BaseItems.IRON_PLATE.get()).addIngredient(Tags.Items.INGOTS_IRON).addIngredient(BaseItems.FLATTER_HAMMER.get()).addCriterion("has_iron_ingot", hasItem(Tags.Items.INGOTS_IRON)).build(consumer);
-        ShapelessRecipeBuilder.shapelessRecipe(BaseItems.STEEL_PLATE.get()).addIngredient(BaseTags.ForgeItems.INGOTS_STEEL).addIngredient(BaseItems.FLATTER_HAMMER.get()).addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-
-        // Nugget to ingot and vice-versa
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_INGOT.get()).patternLine("xxx").patternLine("xxx").patternLine("xxx").key('x', BaseTags.ForgeItems.NUGGETS_STEEL).addCriterion("has_steel_nugget", hasItem(BaseTags.ForgeItems.NUGGETS_STEEL)).setGroup("steel_ingot").build(consumer);
-        ShapelessRecipeBuilder.shapelessRecipe(BaseItems.STEEL_NUGGET.get(), 9).addIngredient(BaseTags.ForgeItems.INGOTS_STEEL).addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer, MapperBase.MODID + ":steel_nugget_from_ingot");
-
-        // Ingot to block and vice-versa
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.STEEL_BLOCK.get()).patternLine("xxx").patternLine("xxx").patternLine("xxx").key('x', BaseTags.ForgeItems.INGOTS_STEEL).addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapelessRecipeBuilder.shapelessRecipe(BaseItems.STEEL_INGOT.get(), 9).addIngredient(BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL).addCriterion("has_steel_block", hasItem(BaseTags.ForgeItems.STORAGE_BLOCKS_STEEL)).setGroup("steel_ingot").build(consumer, MapperBase.MODID + ":steel_ingot_from_block");
-
-        // Tools
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_AXE.get()).key('#', Items.STICK).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("XX").patternLine("X#").patternLine(" #").addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_PICKAXE.get()).key('#', Items.STICK).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("XXX").patternLine(" # ").patternLine(" # ").addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_SHOVEL.get()).key('#', Items.STICK).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("X").patternLine("#").patternLine("#").addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_SWORD.get()).key('#', Items.STICK).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("X").patternLine("X").patternLine("#").addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_HOE.get()).key('#', Items.STICK).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("XX").patternLine(" #").patternLine(" #").addCriterion("has_steel_ingot", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_BOOTS.get()).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("X X").patternLine("X X").addCriterion("has_steel", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_CHESTPLATE.get()).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("X X").patternLine("XXX").patternLine("XXX").addCriterion("has_steel", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_HELMET.get()).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("XXX").patternLine("X X").addCriterion("has_steel", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.STEEL_LEGGINGS.get()).key('X', BaseTags.ForgeItems.INGOTS_STEEL).patternLine("XXX").patternLine("X X").patternLine("X X").addCriterion("has_steel", hasItem(BaseTags.ForgeItems.INGOTS_STEEL)).build(consumer);
-
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BaseItems.STEEL_PICKAXE.get(), BaseItems.STEEL_SHOVEL.get(), BaseItems.STEEL_AXE.get(), BaseItems.STEEL_HOE.get(), BaseItems.STEEL_SWORD.get(), BaseItems.STEEL_HELMET.get(), BaseItems.STEEL_CHESTPLATE.get(), BaseItems.STEEL_LEGGINGS.get(), BaseItems.STEEL_BOOTS.get(), BaseItems.STEEL_HORSE_ARMOR.get()), BaseItems.STEEL_NUGGET.get(), 0.1f, 130).addCriterion("has_iron_nugget", hasItem(Items.IRON_NUGGET)).addCriterion("has_steel_pickaxe", hasItem(BaseItems.STEEL_PICKAXE.get())).addCriterion("has_steel_shovel", hasItem(BaseItems.STEEL_SHOVEL.get())).addCriterion("has_steel_axe", hasItem(BaseItems.STEEL_AXE.get())).addCriterion("has_steel_hoe", hasItem(BaseItems.STEEL_HOE.get())).addCriterion("has_steel_sword", hasItem(BaseItems.STEEL_SWORD.get())).addCriterion("has_steel_helmet", hasItem(BaseItems.STEEL_HELMET.get())).addCriterion("has_steel_chestplate", hasItem(BaseItems.STEEL_CHESTPLATE.get())).addCriterion("has_steel_leggings", hasItem(BaseItems.STEEL_LEGGINGS.get())).addCriterion("has_steel_boots", hasItem(BaseItems.STEEL_BOOTS.get())).addCriterion("has_steel_horse_armor", hasItem(BaseItems.STEEL_HORSE_ARMOR.get())).build(consumer, MapperBase.MODID + ":steel_nugget_from_recycling");
 
         // Asphalt
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseItems.RAW_BITUMEN.get()).key('S', Tags.Items.SAND).patternLine("SB").patternLine("BG").addCriterion("has_raw_bitumen", hasItem(BaseItems.RAW_BITUMEN.get())).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt1");
