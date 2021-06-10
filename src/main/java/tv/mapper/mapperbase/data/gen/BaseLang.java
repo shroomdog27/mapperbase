@@ -22,6 +22,14 @@ public class BaseLang extends LanguageProvider
         {
             default:
             case "en_us":
+                add(BaseBlocks.STEEL_BLOCK.get(), "Steel Block");
+                add(BaseBlocks.STEEL_SLAB.get(), "Steel Slab");
+                add(BaseBlocks.STEEL_STAIRS.get(), "Steel Stairs");
+                add(BaseBlocks.STEEL_WALL.get(), "Steel Wall");
+                add(BaseBlocks.STEEL_PRESSURE_PLATE.get(), "Steel Pressure Plate");
+                add(BaseBlocks.STEEL_FENCE.get(), "Steel Fence");
+                add(BaseBlocks.STEEL_FENCE_GATE.get(), "Steel Fence Gate");
+                
                 add(BaseBlocks.CONCRETE.get(), "Concrete");
                 add(BaseBlocks.CONCRETE_SLAB.get(), "Concrete Slab");
                 add(BaseBlocks.CONCRETE_STAIRS.get(), "Concrete Stairs");
@@ -46,6 +54,14 @@ public class BaseLang extends LanguageProvider
                 add("itemGroup.mapperbase_group", "Mapper Base");
                 break;
             case "fr_fr":
+                add(BaseBlocks.STEEL_BLOCK.get(), "Bloc d'acier");
+                add(BaseBlocks.STEEL_SLAB.get(), "Dalle en acier");
+                add(BaseBlocks.STEEL_STAIRS.get(), "Escalier en acier");
+                add(BaseBlocks.STEEL_WALL.get(), "Muret en acier");
+                add(BaseBlocks.STEEL_PRESSURE_PLATE.get(), "Plaque de pression en acier");
+                add(BaseBlocks.STEEL_FENCE.get(), "Barri�re en acier");
+                add(BaseBlocks.STEEL_FENCE_GATE.get(), "Portillon en acier");
+                
                 add(BaseBlocks.CONCRETE.get(), "Bloc de béton");
                 add(BaseBlocks.CONCRETE_SLAB.get(), "Dalle en béton");
                 add(BaseBlocks.CONCRETE_STAIRS.get(), "Escalier en béton");

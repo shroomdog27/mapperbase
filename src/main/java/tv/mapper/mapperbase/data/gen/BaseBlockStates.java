@@ -37,6 +37,16 @@ public class BaseBlockStates extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        simpleBlock(BaseBlocks.STEEL_BLOCK.get());
+        slabBlock(BaseBlocks.STEEL_SLAB.get(), modLoc("block/steel_block"), modLoc("block/steel_slab_side"), modLoc("block/steel_block"), modLoc("block/steel_block"));
+        stairsBlock(BaseBlocks.STEEL_STAIRS.get(), modLoc("block/steel_block"), modLoc("block/steel_block"), modLoc("block/steel_block"));
+        newWallBlock(BaseBlocks.STEEL_WALL.get(), new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_post"), new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_side"),
+            new UncheckedModelFile(MapperBase.MODID + ":block/steel_wall_side_tall"));
+        pressurePlateBlock(BaseBlocks.STEEL_PRESSURE_PLATE.get(), new UncheckedModelFile(MapperBase.MODID + ":block/steel_pressure_plate"),
+            new UncheckedModelFile(MapperBase.MODID + ":block/steel_pressure_plate_down"));
+        fenceBlock(BaseBlocks.STEEL_FENCE.get(), modLoc("block/steel_block"));
+        fenceGateBlock(BaseBlocks.STEEL_FENCE_GATE.get(), modLoc("block/steel_block"));
+        
         simpleBlock(BaseBlocks.CONCRETE.get());
         slabBlock(BaseBlocks.CONCRETE_SLAB.get(), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"));
         stairsBlock(BaseBlocks.CONCRETE_STAIRS.get(), modLoc("block/concrete"), modLoc("block/concrete"), modLoc("block/concrete"));

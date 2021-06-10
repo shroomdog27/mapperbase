@@ -36,6 +36,8 @@ public class BaseTags
     {
         public static final ITag.INamedTag<Block> PRESSURE_PLATES = tag("pressure_plates");
 
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_STEEL = tag("storage_blocks/steel");
+        public static final ITag.INamedTag<Block> FENCES_STEEL = tag("fences/steel");
 
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_BITUMEN = tag("storage_blocks/bitumen");
         public static final ITag.INamedTag<Block> ORES_BITUMEN = tag("ores/bitumen");
@@ -48,6 +50,8 @@ public class BaseTags
 
     public static class ForgeItems
     {
+        public static final ITag.INamedTag<Item> FENCES_STEEL = tag("fences/steel");
+        
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_BITUMEN = tag("storage_blocks/bitumen");
         public static final ITag.INamedTag<Item> ORES_BITUMEN = tag("ores/bitumen");
         

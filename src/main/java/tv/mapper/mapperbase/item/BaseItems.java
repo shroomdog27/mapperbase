@@ -13,6 +13,16 @@ public class BaseItems
 {
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MapperBase.MODID);
 
+    public static final RegistryObject<Item> STEEL_ITEM = ITEMS.register("steel_block", () -> new BlockItem(BaseBlocks.STEEL_BLOCK.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
+    public static final RegistryObject<Item> STEEL_STAIRS_ITEM = ITEMS.register("steel_stairs", () -> new BlockItem(BaseBlocks.STEEL_STAIRS.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
+    public static final RegistryObject<Item> STEEL_SLAB_ITEM = ITEMS.register("steel_slab", () -> new BlockItem(BaseBlocks.STEEL_SLAB.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
+    public static final RegistryObject<Item> STEEL_WALL_ITEM = ITEMS.register("steel_wall", () -> new BlockItem(BaseBlocks.STEEL_WALL.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
+    public static final RegistryObject<Item> STEEL_PRESSURE_PLATE_ITEM = ITEMS.register("steel_pressure_plate",
+        () -> new BlockItem(BaseBlocks.STEEL_PRESSURE_PLATE.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
+    public static final RegistryObject<Item> STEEL_FENCE_ITEM = ITEMS.register("steel_fence", () -> new BlockItem(BaseBlocks.STEEL_FENCE.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
+    public static final RegistryObject<Item> STEEL_FENCE_GATE_ITEM = ITEMS.register("steel_fence_gate",
+        () -> new BlockItem(BaseBlocks.STEEL_FENCE_GATE.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
+    
     public static final RegistryObject<Item> CONCRETE_ITEM = ITEMS.register("concrete", () -> new BlockItem(BaseBlocks.CONCRETE.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
     public static final RegistryObject<Item> CONCRETE_STAIRS_ITEM = ITEMS.register("concrete_stairs", () -> new BlockItem(BaseBlocks.CONCRETE_STAIRS.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
     public static final RegistryObject<Item> CONCRETE_SLAB_ITEM = ITEMS.register("concrete_slab", () -> new BlockItem(BaseBlocks.CONCRETE_SLAB.get(), new Item.Properties().group(BaseGroups.MAPPERBASE)));
