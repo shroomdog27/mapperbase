@@ -41,17 +41,17 @@ public class BaseRecipes extends RecipeProvider
         basicRecipes(consumer, BaseBlocks.CONCRETE.get(), BaseBlocks.CONCRETE_SLAB.get(), BaseBlocks.CONCRETE_STAIRS.get(), BaseBlocks.CONCRETE_WALL.get(), BaseBlocks.CONCRETE_PRESSURE_PLATE.get(), null, BaseBlocks.CONCRETE_FENCE.get(), BaseBlocks.CONCRETE_FENCE_GATE.get());
 
         // Asphalt
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseItems.RAW_BITUMEN.get()).key('S', Tags.Items.SAND).patternLine("SB").patternLine("BG").addCriterion("has_raw_bitumen", hasItem(BaseItems.RAW_BITUMEN.get())).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt1");
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseItems.RAW_BITUMEN.get()).key('S', Tags.Items.SAND).patternLine("BS").patternLine("GB").addCriterion("has_raw_bitumen", hasItem(BaseItems.RAW_BITUMEN.get())).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt2");
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseItems.RAW_BITUMEN.get()).key('S', Tags.Items.SAND).patternLine("GB").patternLine("BS").addCriterion("has_raw_bitumen", hasItem(BaseItems.RAW_BITUMEN.get())).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt3");
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseItems.RAW_BITUMEN.get()).key('S', Tags.Items.SAND).patternLine("BG").patternLine("SB").addCriterion("has_raw_bitumen", hasItem(BaseItems.RAW_BITUMEN.get())).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt4");
+        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseTags.ForgeItems.BITUMEN).key('S', Tags.Items.SAND).patternLine("SB").patternLine("BG").addCriterion("has_raw_bitumen", hasItem(BaseTags.ForgeItems.BITUMEN)).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt1");
+        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseTags.ForgeItems.BITUMEN).key('S', Tags.Items.SAND).patternLine("BS").patternLine("GB").addCriterion("has_raw_bitumen", hasItem(BaseTags.ForgeItems.BITUMEN)).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt2");
+        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseTags.ForgeItems.BITUMEN).key('S', Tags.Items.SAND).patternLine("GB").patternLine("BS").addCriterion("has_raw_bitumen", hasItem(BaseTags.ForgeItems.BITUMEN)).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt3");
+        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get(), 4).key('G', Tags.Items.GRAVEL).key('B', BaseTags.ForgeItems.BITUMEN).key('S', Tags.Items.SAND).patternLine("BG").patternLine("SB").addCriterion("has_raw_bitumen", hasItem(BaseTags.ForgeItems.BITUMEN)).setGroup("asphalt").build(consumer, MapperBase.MODID + ":asphalt4");
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT.get()).patternLine("i").patternLine("i").key('i', BaseBlocks.ASPHALT_SLAB.get()).addCriterion("has_asphalt_slab", hasItem(BaseBlocks.ASPHALT_SLAB.get())).build(consumer, MapperBase.MODID + ":asphalt_block_from_slabs");
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT_SLAB.get(), 6).patternLine("iii").key('i', BaseTags.Items.ASPHALT).addCriterion("has_asphalt_block", hasItem(BaseTags.Items.ASPHALT)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT_STAIRS.get(), 4).key('#', BaseTags.Items.ASPHALT).patternLine("#  ").patternLine("## ").patternLine("###").addCriterion("has_asphalt_block", hasItem(BaseTags.Items.ASPHALT)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BaseBlocks.ASPHALT_PRESSURE_PLATE.get()).key('#', BaseTags.Items.ASPHALT).patternLine("##").addCriterion("has_asphalt_block", hasItem(BaseTags.Items.ASPHALT)).build(consumer);
         basicRecipes(consumer, BaseBlocks.ASPHALT.get(), BaseBlocks.ASPHALT_SLAB.get(), BaseBlocks.ASPHALT_STAIRS.get(), null, BaseBlocks.ASPHALT_PRESSURE_PLATE.get(), null, null, null);
 
-        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.BITUMEN_BLOCK.get()).patternLine("xxx").patternLine("xxx").patternLine("xxx").key('x', BaseItems.RAW_BITUMEN.get()).addCriterion("has_raw_bitumen", hasItem(BaseItems.RAW_BITUMEN.get())).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BaseBlocks.BITUMEN_BLOCK.get()).patternLine("xxx").patternLine("xxx").patternLine("xxx").key('x', BaseTags.ForgeItems.BITUMEN).addCriterion("has_raw_bitumen", hasItem(BaseTags.ForgeItems.BITUMEN)).build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(BaseItems.RAW_BITUMEN.get(), 9).addIngredient(BaseTags.ForgeItems.STORAGE_BLOCKS_BITUMEN).addCriterion("has_bitumen_block", hasItem(BaseTags.ForgeItems.STORAGE_BLOCKS_BITUMEN)).build(consumer, MapperBase.MODID + ":raw_bitumen_from_block");
 
         // Ore
@@ -59,7 +59,7 @@ public class BaseRecipes extends RecipeProvider
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BaseItems.BITUMEN_ORE_ITEM.get()), BaseItems.RAW_BITUMEN.get(), 0.1f, 200).addCriterion("has_bitumen_ore", hasItem(BaseItems.BITUMEN_ORE_ITEM.get())).build(consumer, MapperBase.MODID + ":raw_bitumen_from_smelting");
 
         // Others
-        ShapedRecipeBuilder.shapedRecipe(BaseItems.BITUMINOUS_COAL.get(), 8).patternLine("xxx").patternLine("xyx").patternLine("xxx").key('x', BaseItems.RAW_BITUMEN.get()).key('y', Items.COAL).addCriterion("has_raw_bitumen", hasItem(BaseItems.RAW_BITUMEN.get())).addCriterion("has_coal", hasItem(Items.COAL)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BaseItems.BITUMINOUS_COAL.get(), 8).patternLine("xxx").patternLine("xyx").patternLine("xxx").key('x', BaseTags.ForgeItems.BITUMEN).key('y', Items.COAL).addCriterion("has_raw_bitumen", hasItem(BaseTags.ForgeItems.BITUMEN)).addCriterion("has_coal", hasItem(Items.COAL)).build(consumer);
     }
 
     private void basicRecipes(Consumer<IFinishedRecipe> consumer, Block base, Block slab, Block stairs, Block wall, Block pressure, Block button, Block fence, Block fence_gate)

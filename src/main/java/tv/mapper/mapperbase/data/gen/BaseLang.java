@@ -29,7 +29,7 @@ public class BaseLang extends LanguageProvider
                 add(BaseBlocks.STEEL_PRESSURE_PLATE.get(), "Steel Pressure Plate");
                 add(BaseBlocks.STEEL_FENCE.get(), "Steel Fence");
                 add(BaseBlocks.STEEL_FENCE_GATE.get(), "Steel Fence Gate");
-                
+
                 add(BaseBlocks.CONCRETE.get(), "Concrete");
                 add(BaseBlocks.CONCRETE_SLAB.get(), "Concrete Slab");
                 add(BaseBlocks.CONCRETE_STAIRS.get(), "Concrete Stairs");
@@ -61,14 +61,14 @@ public class BaseLang extends LanguageProvider
                 add(BaseBlocks.STEEL_PRESSURE_PLATE.get(), "Plaque de pression en acier");
                 add(BaseBlocks.STEEL_FENCE.get(), "Barrière en acier");
                 add(BaseBlocks.STEEL_FENCE_GATE.get(), "Portillon en acier");
-                
-                add(BaseBlocks.CONCRETE.get(), "Bloc de bÃ©ton");
-                add(BaseBlocks.CONCRETE_SLAB.get(), "Dalle en bÃ©ton");
-                add(BaseBlocks.CONCRETE_STAIRS.get(), "Escalier en bÃ©ton");
-                add(BaseBlocks.CONCRETE_WALL.get(), "Muret en bÃ©ton");
-                add(BaseBlocks.CONCRETE_PRESSURE_PLATE.get(), "Plaque de pression en bÃ©ton");
-                add(BaseBlocks.CONCRETE_FENCE.get(), "BarriÃ¨re en bÃ©ton");
-                add(BaseBlocks.CONCRETE_FENCE_GATE.get(), "Portillon en bÃ©ton");
+
+                add(BaseBlocks.CONCRETE.get(), "Bloc de béton");
+                add(BaseBlocks.CONCRETE_SLAB.get(), "Dalle en béton");
+                add(BaseBlocks.CONCRETE_STAIRS.get(), "Escalier en béton");
+                add(BaseBlocks.CONCRETE_WALL.get(), "Muret en béton");
+                add(BaseBlocks.CONCRETE_PRESSURE_PLATE.get(), "Plaque de pression en béton");
+                add(BaseBlocks.CONCRETE_FENCE.get(), "Barrière en béton");
+                add(BaseBlocks.CONCRETE_FENCE_GATE.get(), "Portillon en béton");
 
                 add(BaseBlocks.ASPHALT.get(), "Asphalte");
                 add(BaseBlocks.ASPHALT_SLAB.get(), "Dalle d'asphalte");

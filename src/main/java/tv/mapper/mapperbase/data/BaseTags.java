@@ -52,6 +52,8 @@ public class BaseTags
     {
         public static final ITag.INamedTag<Item> FENCES_STEEL = tag("fences/steel");
         
+        public static final ITag.INamedTag<Item> STORAGE_BLOCKS_STEEL = tag("storage_blocks/steel");
+
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_BITUMEN = tag("storage_blocks/bitumen");
         public static final ITag.INamedTag<Item> ORES_BITUMEN = tag("ores/bitumen");
         
